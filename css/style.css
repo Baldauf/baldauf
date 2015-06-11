@@ -389,10 +389,10 @@ ul.nav-menu-content li:hover > ul,
 	display:table-cell;
 	vertical-align:middle;
 	padding-left:15px;
-	cursor:url(../img/candy_cur.cur), pointer;
+	cursor: pointer;
 }
 .toggle-nav-menu a:hover{
-	cursor:url(../img/candy_cur.cur), auto;
+	cursor: auto;
 }
 .toggle-nav-menu i{
 	display:block;
@@ -1788,7 +1788,7 @@ section i{
 	background-position:center bottom;
 }
 .about-4_bg{
-	background-image:url(../img/about-4_bg.jpg);
+	background-image:url(../img/about_bg.jpg);
 	background-size:100% auto;
 	background-position:center bottom;
 }
@@ -1865,7 +1865,7 @@ section i{
 }
 
 .portfolio-thumbnail{
-	cursor:url(../img/candy_cur.cur), auto;
+	cursor: auto;
 }
 .portfolio-guttered .portfolio-thumbnail{
 	margin-bottom:60px;
@@ -2842,7 +2842,7 @@ ul.page-numbers{
 	left:0;
 	bottom:0;
 	right:0;
-	cursor:url(../img/candy_cur.cur), auto;
+	cursor: auto;
 	background-color:#fff;
 	z-index:999;
 }
