@@ -2021,6 +2021,12 @@ a::-moz-focus-inner {
 	background-position:center;
 }
 
+.call-to-action.resume{
+	background-image:url(../img/resume_bg.jpg);
+	background-size:100% auto;
+	background-position:center;
+}
+
 /* Team */
 .member-content{
 	display:table;
@@ -2064,6 +2070,8 @@ a::-moz-focus-inner {
 .member-caption-2:hover{
 	opacity:1;
 }
+
+
 
 /*
 --------------------
