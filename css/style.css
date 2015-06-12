@@ -1969,16 +1969,10 @@ section i{
 	margin-right:-5px;
 }
 .portfolio-thumbnail-caption .portfolio-category li{
+	display: block;
 	color:#d5d5d5;
 }
-.portfolio-category li:after{
-	content:".";
-	padding-left:10px;
-}
-.portfolio-category li:last-child:after{
-	content:"";
-	padding-left:0px;
-}
+
 
 /* Portfolio nav */
 .portfolio-navigation{
