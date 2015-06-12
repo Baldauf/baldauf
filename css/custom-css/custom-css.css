@@ -7,7 +7,7 @@
 .btn-link:hover, .btn-link:focus, .btn-link:active, .heading-underlined:after, .heading-underlined.black:after, .heading-strike:before, .heading-strike:after, .heading-crossed:after, .filter a:hover, .filter a:focus, .page-numbers li span, .footer-social a:hover, .footer-social a:focus, .nav-tabs li.active a, .nav-tabs li a:hover, .nav-tabs li a:focus, .panel-title:hover, .panel-title:focus {
     border-color:#2AC4EA;
 }
-.btn-link, .pricing-table-content.pricing-recommanded .pricing-title:before{
+.btn-link, .pricing-table-content.pricing-Recommended .pricing-title:before{
 	color:#2AC4EA;
 }
 /*.progress {
