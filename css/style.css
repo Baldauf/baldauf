@@ -1840,22 +1840,35 @@ section i{
 	text-align: right;
 }
 
+.bg-img {
+	display: block;
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+}
+.bg-img.left {
+	left: 0;
+}
+
+.bg-img.right {
+	right: 0;
+}
+
+.bg-img img {
+	min-width: 100%;
+	min-height: 100%;
+	width: initial;
+}
+
+
+
 /*
 --------------------------
 10. ABOUT US
 --------------------------
 */
 
-.about_bg{
-	background-image:url(../img/about_bg.jpg);
-	background-size:cover;
-	background-position:center bottom;
-}
-.about-4_bg{
-	background-image:url(../img/about_bg.jpg);
-	background-size:100% auto;
-	background-position:center bottom;
-}
 
 /*
 --------------------------
@@ -2176,10 +2189,10 @@ a::-moz-focus-inner {
 	max-width: 75%;
 }
 
-.service-3_bg{
-	background-image:url(../img/service-3_bg.jpg);
-	background-size:100% auto;
-	background-position:center bottom;
+.about-4_bg,
+.service-3_bg {
+	position: relative;
+	overflow: hidden;
 }
 
 /*
