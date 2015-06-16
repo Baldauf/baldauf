@@ -2158,6 +2158,15 @@ a::-moz-focus-inner {
 	background-position:center;
 }
 
+.skills ul li span {
+	display: block;
+	padding-left: 20px;
+	padding-bottom: 10px;
+	font-size: 12px;
+	font-style: italic;
+	line-height: 12px;
+}
+
 /* Progress bar */
 .progress-heading{
 	margin-bottom:5px;
