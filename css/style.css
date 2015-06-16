@@ -716,10 +716,29 @@ ul.nav-menu-content li:hover > ul,
 	height:420px;
 }
 .page-header_portfolio_bg{
-	background-image:url('../img/portfolio_single_31.jpg');
 	background-size:cover;
 	background-position: 0;
 	height:420px;
+}
+
+.page-header_portfolio_bg.opx {
+	background-image:url('../img/opx_portfolio_single_hero.jpg');
+}
+
+.page-header_portfolio_bg.lv3 {
+	background-image:url('../img/lv3_portfolio_single_hero.jpg');
+}
+
+.page-header_portfolio_bg.pan {
+	background-image:url('../img/pan_portfolio_single_hero.jpg');
+}
+
+.page-header_portfolio_bg.fas {
+	background-image:url('../img/fas_portfolio_single_hero.jpg');
+}
+
+.page-header_portfolio_bg.swv {
+	background-image:url('../img/swv_portfolio_single_hero.jpg');
 }
 
 /*
@@ -1970,6 +1989,7 @@ section i{
 }
 
 .portfolio-thumbnail-caption:hover{
+	cursor: pointer;
 	background-color: rgba(0,0,0,0.6);
 	opacity:1;
 }
@@ -2152,10 +2172,9 @@ a::-moz-focus-inner {
 15. SKILLS, PROGRESS BAR & SERVICES
 --------------------
 */
-.skills_bg{
-	background-image:url(../img/skills_bg.jpg);
-	background-size:100% auto;
-	background-position:center;
+.skills_bg {
+	position: relative;
+	overflow: hidden;
 }
 
 .skills ul li span {

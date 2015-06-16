@@ -520,10 +520,10 @@
 			return false;
 		});
 
-		// $portfolio_container.isotope();
-		// $portfolio_container.imagesLoaded(function() {
-		// 	$portfolio_container.isotope('layout');
-		// });
+		$portfolio_container.isotope();
+		$portfolio_container.imagesLoaded(function() {
+			$portfolio_container.isotope('layout');
+		});
 
 		// progress bar
 		$('.progress-bar-animate').each(function(){
