@@ -179,36 +179,36 @@
 			aArray.push(ahref);
 		} // this for loop fills the aArray with attribute href values
 
-		$(window).on('scroll', function(){
-			var windowPos = $('.header-sticky').width()?$(window).scrollTop()+80:$(window).scrollTop(); // get the offset of the window from the top of page sticky check
-			var windowHeight = $(window).height(); // get the height of the window
-			var docHeight = $(document).height();
+		// $(window).on('scroll', function(){
+		// 	var windowPos = $('.header-sticky').width()?$(window).scrollTop()+80:$(window).scrollTop(); // get the offset of the window from the top of page sticky check
+		// 	var windowHeight = $(window).height(); // get the height of the window
+		// 	var docHeight = $(document).height();
 
-			for (var i=0; i < aArray.length; i++) {
-				var theID = aArray[i];
+		// 	for (var i=0; i < aArray.length; i++) {
+		// 		var theID = aArray[i];
 
-				var divPosid = $(theID);
-				if (!divPosid.length) {
-					return;
-				}
-				var divPos = divPosid.offset().top; // get the offset of the div from the top of page
+		// 		var divPosid = $(theID);
+		// 		if (!divPosid.length) {
+		// 			return;
+		// 		}
+		// 		var divPos = divPosid.offset().top; // get the offset of the div from the top of page
 
-				var divHeight = $(theID).height(); // get the height of the div in question
-				if (windowPos >= divPos && windowPos < (divPos + divHeight)) {
-					$("a[href='" + theID + "']").addClass("active");
-				} else {
-					$("a[href='" + theID + "']").removeClass("active");
-				}
-			}
+		// 		var divHeight = $(theID).height(); // get the height of the div in question
+		// 		if (windowPos >= divPos && windowPos < (divPos + divHeight)) {
+		// 			$("a[href='" + theID + "']").addClass("active");
+		// 		} else {
+		// 			$("a[href='" + theID + "']").removeClass("active");
+		// 		}
+		// 	}
 
-			if(windowPos + windowHeight == docHeight) {
-				if (!$("nav li:last-child a").hasClass("active")) {
-					var navActiveCurrent = $(".active").attr("href");
-					$("a[href='" + navActiveCurrent + "']").removeClass("active");
-					$("nav li:last-child a").addClass("active");
-				}
-			}
-		});
+		// 	if(windowPos + windowHeight == docHeight) {
+		// 		if (!$("nav li:last-child a").hasClass("active")) {
+		// 			var navActiveCurrent = $(".active").attr("href");
+		// 			$("a[href='" + navActiveCurrent + "']").removeClass("active");
+		// 			$("nav li:last-child a").addClass("active");
+		// 		}
+		// 	}
+		// });
 
 		$('.agni-slides').each(function(){
 			// super slider
@@ -221,11 +221,10 @@
 				});
 			}
 			$(this).superslides({
-				animation_speed: 700,
+				animation_speed: 0,
 				animation_easing: 'easeOutQuad',
-				animation: 'slide',
 				pagination:false,
-				play: 7000
+				play: 20000
 			});
 			$(this).find('.slide-title').each(function(){
 				slideAnimation('.slide-title', 'fadeInDown');
@@ -521,10 +520,10 @@
 			return false;
 		});
 
-		$portfolio_container.isotope();
-		$portfolio_container.imagesLoaded(function() {
-			$portfolio_container.isotope('layout');
-		});
+		// $portfolio_container.isotope();
+		// $portfolio_container.imagesLoaded(function() {
+		// 	$portfolio_container.isotope('layout');
+		// });
 
 		// progress bar
 		$('.progress-bar-animate').each(function(){
@@ -549,101 +548,6 @@
 			})
 		});
 
-		// carousel clients
-		$('.carousel-clients').each(function() {
-			$(this).owlCarousel({
-				autoplay : true,
-				autoplayTimeout:4000,
-				loop:true,
-				margin:60,
-				responsive:{
-					0:{
-						items:1
-					},
-					768:{
-						items:2
-					},
-					992:{
-						items:3
-					},
-					1200:{
-						items:4
-					}
-				}
-			})
-		});
-
-		// carousel team
-		$('.carousel-team').each(function() {
-			$(this).owlCarousel({
-				autoplay : true,
-				autoplayTimeout:5000,
-				autoplayHoverPause : true,
-				loop:true,
-				margin:60,
-				responsive:{
-					0:{
-						items:1
-					},
-					768:{
-						items:1
-					},
-					992:{
-						items:2
-					},
-					1200:{
-						items:2
-					}
-				}
-			})
-		});
-		// carousel team
-		$('.carousel-team-2').each(function() {
-			$(this).owlCarousel({
-				autoplay : true,
-				autoplayTimeout:5000,
-				autoplayHoverPause : true,
-				loop:true,
-				margin:60,
-				responsive:{
-					0:{
-						items:1
-					},
-					768:{
-						items:2
-					},
-					992:{
-						items:3
-					},
-					1200:{
-						items:3
-					}
-				}
-			})
-		});
-
-		// carousel testimonials
-		$('.carousel-testimonials').each(function() {
-			$(this).owlCarousel({
-				autoplay : true,
-				autoplayTimeout:4000,
-				smartSpeed:700,
-				dots :false,
-				loop:true,
-				items:1
-
-			})
-		});
-
-		$('.blog-masonry').each(function(){
-			var $container = $(this).imagesLoaded( function() {
-				$container.isotope({
-					itemSelector: '.blog-content',
-					layoutMode: 'masonry'
-				})
-			})
-		});
-
 
 		$('.post-details').each(function(){
 			$(this).on({
@@ -653,13 +557,6 @@
 				mouseleave: function(){
 					$(this).siblings('.post-thumbnail').removeClass('post-thumbnail-hovered');
 				}
-			})
-		});
-
-		$('.post-sharing-buttons').each(function(){
-			$(this).find('a').on('click', function(s){
-				s.preventDefault();
-				newPopup($(this).attr('href'));
 			})
 		});
 
@@ -718,59 +615,4 @@ function slideAnimation(element, animation){
 			}, 1000);
 		}
 	);
-}
-// Popup window code
-function newPopup(url) {
-	popupWindow = window.open(
-		url,'popUpWindow','height=700,width=800,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes')
-}
-
-
-function initializeMap(lat,lang,desc,showImage,imageTitle,divId,mapstyle) {
-	if( mapstyle == '2' ){
-		var styles = [{"stylers":[{"hue":"#ff1a00"},{"invert_lightness":true},{"saturation":-100},{"lightness":33},{"gamma":0.5}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#2D333C"}]}];
-	}
-	else{
-		var styles = [{"featureType":"landscape","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"stylers":[{"hue":"#00aaff"},{"saturation":-100},{"gamma":2.15},{"lightness":12}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"visibility":"on"},{"lightness":24}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":57}]}];
-	}
-	var latlng = new google.maps.LatLng(lat,lang);
-	var settings = {
-		zoom: 16,
-		center: latlng,
-		mapTypeControl: false,
-		scrollwheel: false,
-		draggable: true,
-		mapTypeControlOptions: {
-			mapTypeIds: ['Styled']
-		},
-		navigationControl: true,
-		navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
-		mapTypeId: 'Styled',
-	};
-	var map = new google.maps.Map(document.getElementById(divId), settings);
-	var styledMapType = new google.maps.StyledMapType(styles, { name: 'Styled' });
-    map.mapTypes.set('Styled', styledMapType);
-
-	var contentString = desc;
-	var infowindow = new google.maps.InfoWindow({
-		content: contentString
-	});
-
-	var companyImage = new google.maps.MarkerImage(showImage,
-		new google.maps.Size(80,80),
-		new google.maps.Point(0,0)
-	);
-
-	var companyPos = new google.maps.LatLng(lat,lang);
-
-	var companyMarker = new google.maps.Marker({
-		position: companyPos,
-		map: map,
-		icon: companyImage,
-		title:imageTitle,
-		zIndex: 3
-	});
-	google.maps.event.addListener(companyMarker, 'click', function() {
-		infowindow.open(map,companyMarker);
-	});
 }

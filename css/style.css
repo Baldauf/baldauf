@@ -718,6 +718,7 @@ ul.nav-menu-content li:hover > ul,
 .page-header_portfolio_bg{
 	background-image:url('../img/portfolio_single_31.jpg');
 	background-size:cover;
+	background-position: 0;
 	height:420px;
 }
 
@@ -1402,6 +1403,9 @@ section i{
 .padding-20{
 	padding:20px;
 }
+.padding-0 {
+	padding: 0;
+}
 
 .padding-top-150{
 	padding-top:150px;
@@ -2059,13 +2063,12 @@ a::-moz-focus-inner {
 .carousel-clients .client{
 	padding:30px;
 }
-.client img{
+.client .container img{
 	opacity:0.4;
 }
 .client_bg{
-	background-image:url(../img/client_bg.jpg);
-	background-size:100% auto;
-	background-position:center;
+	position: relative;
+	overflow: hidden;
 }
 .clients{
 	margin-left:0;

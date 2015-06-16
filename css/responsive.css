@@ -115,6 +115,9 @@
 
 @media (max-width: 767px) {
 
+	.custom-logo{
+		margin-top:10px;
+	}
 	.header-navigation-menu{
 		min-height:60px;
 	}
@@ -182,6 +185,9 @@
 	}
 	.portfolio-thumbnail-caption {
 		padding:20px;
+	}
+	.portfolio-filter li {
+		margin-bottom: 10px;
 	}
 	.member-image, .member-caption{
 		width:100%;
