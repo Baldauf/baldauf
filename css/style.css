@@ -1989,8 +1989,8 @@ section i{
 
 /* Portfolio nav */
 .portfolio-navigation{
-	position:absolute;
-	top:0;
+	/*position:absolute;
+	top:0;*/
 	width:100%;
 	background-color:#f3f5f8;
 	padding:24px;
