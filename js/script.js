@@ -52,7 +52,7 @@
 					firstName = name.split(' ').slice(0, -1).join(' ');
 				}
 				$.ajax({
-					url: "././contact/contact.php",
+					url: "//formspree.io/shane.baldauf@gmail.com",
 					type: "POST",
 					data: {
 						name: name,
@@ -60,6 +60,7 @@
 						email: email,
 						message: message
 					},
+					dataType: "json",
 					cache: false,
 					success: function() {
 						// Success message
