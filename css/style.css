@@ -3668,6 +3668,9 @@ section i{
     width: 45px;
     margin-top: 18px;
 }
+.heading-shadow {
+  text-shadow: 0px 0px 5px black;
+}
 .section-heading .heading-underlined:after{
 	width:60px;
 	margin:25px 0;
