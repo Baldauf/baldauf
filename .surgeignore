@@ -1,15 +1,1 @@
-css/custom-css/
-css/no-compress/
-animate.css
-font-awesome.min.css
-ionicons.min.css
-norm-plugins.css
-normalize.css
-responsive.css
-style.css
-js/no-compress/
-js/jqBootstrapValidation-1.3.7.min.js
-js/jquery-2.1.1.min.js
-js/jquery-2.1.1.min.map
-js/plugins.js
-js/script.js
+app/
