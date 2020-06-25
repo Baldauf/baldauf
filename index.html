@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="shortcut icon" href="img/favicon.png">
 	<link href="./dist/app.css" rel="stylesheet" type="text/css" />
-	<link href='http://fonts.googleapis.com/css?family=Cabin:400%7CMontserrat:400,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Cabin:400%7CMontserrat:400,700' rel='stylesheet' type='text/css'>
 
 </head>
 <body>
@@ -125,18 +125,17 @@
 							<li class="ion-plus-round has-icon">Co-founded 3 startups impacting 1000s of people*
 								<span>*Ask me how!</span>
 							</li>
-							<li class="ion-plus-round has-icon">Strong leadership, teamwork, and communication skills</li>
 						</ul>
 						<h4 class="heading heading-underlined margin-bottom-30">Competencies</h4>
 						<div class="row">
 							<div class="col-sm-12 col-md-12">
 								<ul class="list padding-bottom-60">
 									<li class="ion-plus-round has-icon">Adobe Creative Suite whiz*
-										<span>*Although I prefer Figma &amp; Sketch. It _is_ <span id="year"></span> ;)</span>
+										<span>*Although I prefer Figma &amp; Sketch. It _is_ <span id="year" style="display: inline; padding: 0;"></span> 🙂</span>
 									</li>
 									<li class="ion-plus-round has-icon">SCSS/CSS/PostCSS mega-expert</li>
 									<li class="ion-plus-round has-icon">Significant Typescript/React/Mobx/Webpack experience</li>
-									<li class="ion-plus-round has-icon">Nuxt/Vue is my JAM(stack) :P</li>
+									<li class="ion-plus-round has-icon">Nuxt/Vue is my JAM(stack) 😜</li>
 								</ul>
 							</div>
 						</div>
@@ -265,7 +264,7 @@
 
 				</div>
 				<div id="colophon" class="footer-colophon text-center">
-					<p class="site-info small">&copy; Shane Baldauf <span id="year"></span></p>
+					<p class="site-info small">&copy; Shane Baldauf <span id="year-footer"></span></p>
 				</div>
 			</div>
 		</div>
@@ -295,6 +294,7 @@
 	</script>
 	<script>
 	  document.getElementById("year").innerHTML = new Date().getFullYear();
+	  document.getElementById("year-footer").innerHTML = new Date().getFullYear();
 	</script>
 </body>
 </html>
